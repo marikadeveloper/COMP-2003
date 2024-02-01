@@ -18,7 +18,7 @@
   - can be displayed as a decimal value (ASCII)
 
 ```c
-/* displays the code number for a character */
+/* 01-charcode.c displays the code number for a character */
 
 #include <stdio.h>
 
@@ -55,7 +55,7 @@ int main(void) {
 - usage example:
 
 ```c
-/** when to use & */
+/** 02-printf-scanf.c when to use & */
 
 #include <stdio.h>
 
@@ -71,6 +71,70 @@ int main(void) {
 
   printf("%d $%.2f %s\n", age, assets, pet);
 
+  return 0;
+}
+```
+
+## Simple arithmetic calculations
+
+```c
+/** 03-height.c requests your name and height in inches and outputs in cm */
+
+#include <stdio.h>
+
+int main(void) {
+  const float inchesToCmMultiplicator = 2.54;
+  char name[30];
+  float heightInches, heightCm;
+
+  printf("Enter your name\n");
+  scanf("%s", name);
+
+  do {
+    // Check if height is >= 0
+    printf("Enter your height in inches\n");
+    scanf("%f", &heightInches);
+  } while(heightInches <= 0);
+
+  heightCm = heightInches * inchesToCmMultiplicator;
+
+  printf("%s, you are %.2f centimeters tall.\n", name, heightCm);
+
+  return 0;
+}
+```
+
+## While loop
+
+```c
+/** 04-while.c Write a program that asks for a starting integer and an ending integer, then
+ * prints all the integers from (and including) the first value up to (and including)
+ * the second value. Be sure to separate each output value by a space.*/
+
+#include <stdio.h>
+
+int main(void) {
+  int start, end;
+
+  do {
+    // Starting number should be >= 0
+    printf("Enter the starting number\n");
+    scanf("%d", &start);
+  } while (start < 0);
+
+  do {
+    // End number should be >= starting number
+    printf("Enter the end number\n");
+    scanf("%d", &end);
+  } while (end < start);
+
+  while (start <= end) {
+    // Keep adding 1 to start number until you reach end
+    printf("%d ", start);
+    start++;
+  }
+
+  printf ("\n");
   return 0;
 }
 ```
