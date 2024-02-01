@@ -14,7 +14,7 @@ int main(void) {
     // Limit should be at least one
     printf("Enter the upper limit\n");
     scanf("%d", &limit);
-  } while (limit <= 0);
+  } while (limit < 1);
 
   for (i = 1; i <= limit; i++) {
     // For each iteration add the current i to the sum

@@ -142,7 +142,7 @@ int main(void) {
 ## For loop
 
 ```c
-/** Write a program that uses a for loop to add all numbers from 1 to a requested
+/** 05-for.c Write a program that uses a for loop to add all numbers from 1 to a requested
  * value and display the running total with a space between each number, like so:
  * Enter the upper limit: 5
  * 1 3 6 10 15
@@ -167,6 +167,41 @@ int main(void) {
   }
 
   printf("\n");
+  return 0;
+}
+```
+
+## Nested for loop
+
+```c
+/** 06-for-nested.c Use nested FOR loops to produce the following pattern:
+$
+$$
+$$$
+$$$$
+$$$$$
+$$$$$$*/
+
+#include <stdio.h>
+
+int main(void) {
+  int i, j, treeHeight;
+
+  do {
+    printf("Enter the height of the dollar tree\n");
+    scanf("%d", &treeHeight);
+  } while (treeHeight < 1);
+
+  for (i = 1; i <= treeHeight; i++) {
+    // i-loop is for counting the rows
+    for (j = 1; j <= i; j++) {
+      // j-loop is for printing the right nr of $ for each row
+      printf("$");
+    }
+    // Print a new line to end the current row of $
+    printf("\n");
+  }
+
   return 0;
 }
 ```
