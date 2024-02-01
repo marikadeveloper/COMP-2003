@@ -2,14 +2,15 @@
 
 #include <stdio.h>
 
-int main(void) {
+int main(void)
+{
   char ch;
 
   printf("Please enter a character.\n");
   scanf("%c", &ch);
-  printf("The code for %c is %d.\n", ch, ch);
+  printf("The code for %c is decimal %d or hex %x.\n", ch, ch, ch);
 
   return 0;
 }
 
-// The code for C is 67
+// The code for c is decimal 99 or hex 63.
