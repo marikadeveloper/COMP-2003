@@ -1,2 +1,2 @@
-# ignore the compiled gcc file
-a.out
+# every .out file
+**/*.out

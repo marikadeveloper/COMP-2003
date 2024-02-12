@@ -205,3 +205,29 @@ int main(void) {
   return 0;
 }
 ```
+
+## Pointers
+
+TODO
+
+```c
+#include <stdio.h>
+
+void interchange(int *u, int *V);
+
+int main(void) {
+  int x = 5, y = 10;
+
+  printf("Originally x = d and y = %d. \n", x, y);
+  interchange(&x, &y); // send addresses of x and y to function
+  printf("Now x = d and y = %d. \n", x, y);
+
+  return 0;
+}
+void interchange(int *u, int *v) {
+  int temp;
+  temp = *u;
+  *U = V;
+  *V = temp;
+}
+```
