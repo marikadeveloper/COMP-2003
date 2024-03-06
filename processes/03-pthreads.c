@@ -1,6 +1,8 @@
-#include <pthread.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <pthread.h>
+
+// gcc 03-pthreads.c -lpthread to run
 
 int sum; // this data is shared by the thread(s)
 
